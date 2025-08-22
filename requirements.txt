@@ -1,0 +1,13 @@
+flask
+requests
+
+# OpenTelemetry core
+opentelemetry-api
+opentelemetry-sdk
+
+# OTLP (gRPC) exporter
+opentelemetry-exporter-otlp-proto-grpc
+
+# Instrumentation for Flask and Requests
+opentelemetry-instrumentation-flask
+opentelemetry-instrumentation-requests

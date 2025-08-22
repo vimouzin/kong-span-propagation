@@ -1,0 +1,19 @@
+_format_version: "3.0"
+
+plugins:
+  - name: opentelemetry
+    config:
+      endpoint: "https://ingress.us-west-2.aws.dash0.com/v1/traces"
+      headers:
+        Authorization: "your key"
+        Dash0-Dataset: "your dataset"
+  - name: response-enricher
+
+services:
+  - name: proxy-service
+    url: http://host.docker.internal:8081/proxy
+    routes:
+      - name: proxy-route
+        paths:
+          - /proxy
+        strip_path: true
